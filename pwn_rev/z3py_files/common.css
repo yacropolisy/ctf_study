@@ -1,0 +1,1199 @@
+/* 
+ * MMA Theme (common.css)
+ *
+ * Author: (c) 2010-2011 chmod@mma.club.uec.ac.jp
+ * Original: (c) 2001, 2002, 2003 by Juergen Hermann
+*/
+
+
+/*
+ * Base styles
+ */
+
+html {
+	background-color: white;
+	color: black;
+	font-family: 'Lucida Grande', Geneva, Helvetica, Arial, sans-serif;
+	font-size: 1em;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+
+/*
+ * Chrome styles
+ */
+
+/* panel bar */
+.panelbar {
+	display: none !important;
+}
+
+/* user */
+#user {
+	background-color: #303C4F;
+	/*background-image: url("../img/logo_mini.png");
+	background-position: 0 3px;
+	background-repeat: no-repeat;*/
+	margin: 0;
+	padding: 0;
+	height: 1.8em;
+	color: #fff;
+}
+
+#user #username {
+	margin: 0;
+	padding: 0.2em;
+	text-align: right;
+}
+
+#user #username span {
+	padding: 0 0.25em;
+	border-left: 1px solid #fff;
+}
+
+#user #username span:first-child {
+	border-left: none;
+}
+
+#user #username span a {
+	text-decoration: none;
+	color: #fff;
+}
+
+#user #username span a:hover {
+	text-decoration: underline;
+}
+
+#user #openididentifier {
+	background: url(../../common/openid.png) no-repeat;
+	background-position: 0 50%;
+	padding-left: 18px;
+}
+
+/* search */
+#search {
+	padding: 0.4em;
+    height: 1.8em;
+}
+
+#searchbox {
+	border-color: #303C4F;
+	border-style: solid;
+	border-width: 1px 2px 2px 1px;
+	overflow: hidden;
+}
+
+#searchform {
+	margin: 0;
+	padding: 0;
+	white-space: nowrap;
+}
+
+#searchform label {
+	display: none;
+}
+
+#searchform #titlesearch, 
+#searchform #fullsearch {
+	display: none;
+}
+
+#searchinput {
+    padding-left: 3.5em;
+	border: none;
+	height: 1.5em;
+	width: 100%;
+    background-image: url("../img/searcher.png");
+	background-position: -2px -15px;
+	background-repeat: no-repeat;
+}
+
+#searchinput.disabled {
+	text-decoration: none;
+	color: #666;
+}
+
+#searchinput.disabled:hover {
+	text-decoration: none;
+	color: #333;
+}
+
+/* logo */
+#logo {
+	float: left;
+	padding: 5px;
+}
+
+/* wikipanel */
+#wikipanel {
+	margin: 0 0 0 160px;
+	padding: 0;
+    font-size: 0.8em;
+}
+
+#wikipanel #navibar {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+#wikipanel #navibar div {
+	margin: 0;
+	padding: 0;
+	color: #555;
+}
+
+#wikipanel #navibar span {
+	margin: 0;
+	padding: 0 0 0 0.5em;
+}
+
+#wikipanel #navibar span a {
+    color: #666;
+}
+
+#wikipanel #navibar span a:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
+#wikipanel #custom_sidebar {
+  display: none;
+}
+
+/* pagepanel */
+#pagepanel {
+    clear: both;
+	margin: 0 0 0 0.25em;
+	padding: 0.4em;
+	font-size: 0.8em;
+}
+
+#pagepanel .editbar {
+	padding: 0;
+	margin: 0;
+}
+
+#pagepanel .editbar span,
+#pagepanel .editbar li {
+	margin: 0;
+	padding: 0 0 0 0.5em;
+	list-style: none;
+}
+
+#pagepanel .editbar span:first-child {
+	padding: 0;
+}
+
+#pagepanel .editbar span,
+#pagepanel .editbar span a,
+#pagepanel .editbar li,
+#pagepanel .editbar li a {
+    display: inline;
+	color: #666;
+}
+
+#pagepanel .editbar span:hover,
+#pagepanel .editbar li:hover {
+	color: #333;
+}
+
+#pagepanel .editbar span a:hover,
+#pagepanel .editbar li a:hover {
+	color: #333;
+	text-decoration: underline;
+}
+
+#pagepanel .editbar span a.nonexistent {
+	color: #bbb;
+}
+
+#pagepanel .editbar span a.nonexistent:hover {
+	color: #999;
+}
+
+#pagepanel .editbar span form.actionsmenu,
+#pagepanel .editbar span form.actionsmenu div {
+	display: inline;
+	margin: 0;
+}
+
+#pagepanel .editbar span form.actionsmenu:hover {
+    text-decoration: none;
+}
+
+.disabled {
+	text-decoration: line-through;
+}
+
+/* location */
+#location {
+	margin: 0 0 0 0.5em;
+	padding: 0.4em;
+}
+
+*[dir="rtl"] #location {
+	clear: left;
+}
+
+#location  a {
+	color: #303C4F;
+	text-decoration: none;
+}
+
+#location  a:hover {
+	color: #12123A;
+	text-decoration: underline;
+}
+
+#interwiki, #pagelocation {
+	display: inline;
+	font-size: 2.5em;
+	font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+*[dir="rtl"] #interwiki {
+	margin: 0;
+}
+
+#interwiki span:after {
+	content: ":";
+}
+
+#pagelocation, #pagetrail {
+	margin: 0;
+	padding: 0;
+}
+
+/*#pagelocation li, #pagetrail li {
+	display: inline;
+	margin: 0;
+	padding: 0;
+}
+
+#pagelocation li:after {
+	content: "/ ";
+}
+
+*[dir="rtl"] #pagelocation li:after {
+	content: " \\ "; /* TODO: check what looks best with RTL //
+}
+
+#pagelocation li:last-child:after {
+	content: "";
+}
+
+/*.sep {
+	display: none;
+}// */
+
+*[dir="rtl"] #pagetrail {
+	clear: left;
+	margin: 0px 11px;
+}
+
+#pagetrail span:after {
+	content: " » ";
+}
+
+*[dir="rtl"] #pagetrail span:after {
+	content: " « ";
+}
+
+#pagetrail span:last-child:after {
+	content: "";
+}
+
+/* message */
+#message {
+	margin: 0.4em;
+	padding: 0.4em;
+	background-color:#444444;
+	color: #fff;
+	text-align: center;
+	font-size: 0.8em;
+	font-weight: bold;
+}
+
+#message a {
+	color: #fff;
+	text-decoration: underline;
+}
+
+#message a:hover {
+	color: #ccc;
+	text-decoration: underline;
+}
+
+#message a.clear-link {
+	display: none;
+}
+
+#message p {
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+
+#message .hint {
+    font-style: italic;
+}
+
+form.dialog {
+	margin: 0 15px;
+}
+
+.dialog td {
+	border: none;
+	padding: 5px;
+}
+
+.dialog td.label {
+	text-align: right;
+	font-weight: bold;
+	width: 25%;
+}
+
+*[dir="rtl"] .dialog td.label {
+	text-align: left;
+}
+
+.dialog td.content input {
+	width: 100%;
+}
+
+/* pageinfo */
+#pageinfo {
+	text-align: right;
+	font-size: 0.8em;
+	color: #666;
+}
+
+/* footer */
+#footer {
+	margin: 0;
+	padding: 0;
+}
+
+#credits {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	font-size: 0.8em;
+	color: #666;
+}
+
+#credits span {
+    margin: 0;
+    padding: 0 0.5em;
+    border-left: 1px solid #CCCCCC;
+}
+
+#credits span:first-child {
+    border-left: none;
+}
+
+#credits img {
+	vertical-align: middle;
+}
+
+#version, #timings {
+	margin: 5px 10px;
+	padding: 0;
+	text-align: center;
+	font-size: 0.8em;
+	color: #6C7680;
+}
+
+#timings li {
+	display: inline;
+	padding: 0 2px;
+	margin: 0 4px;
+}
+
+
+/*
+ * Content styles
+ */
+
+/** page **/
+#page {
+	margin: 0 0.5em 0 0.5em;
+	padding: 0.4em;
+}
+
+/** indent **/
+/*#page > #content > p,
+#page > #content > div[lang][dir] > p,
+#page > #content > .comment > p {
+    text-indent: 1em;
+}*/
+
+/*#page > #content > * {
+	margin-left: 1.5em;
+}
+
+#page > #content > div[lang][dir] {
+	margin-left: 0;
+}
+
+#page > #content > div[lang][dir] > *{
+	margin-left: 1.5em;
+}
+
+#page > #content > .comment {
+	margin-left: 0;
+}
+
+#page > #content > .comment > * {
+	margin-left: 1.5em;
+}
+
+#page > #content h1,
+#page > #content h2,
+#page > #content h3,
+#page > #content h4,
+#page > #content h5,
+#page > #content h6,
+#page > #content hr {
+	margin-left: 0 !important;
+}*/
+
+/** global **/
+/* heading */
+/*#content {
+    counter-reset: h1 h2 0;
+}*/
+
+h1, h2, h3, h4, h5, h6 {
+	color: #303C4F;
+    font-weight: normal;
+}
+
+/*h1 {
+    counter-reset: h2 0;
+}
+
+h1:before {
+	counter-increment: h1 1;
+	content: counter(h1, decimal) " ";
+}
+
+h2:before {
+	counter-increment: h2 1;
+	content: counter(h1, decimal) "." counter(h2, decimal) " ";
+}*/
+
+/* links */
+a, img, img.drawing {
+	border: 0;
+}
+
+a {
+	color: #333399;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #12123A;
+	text-decoration: underline;
+}
+
+a.nonexistent,
+a.badinterwiki,
+a.nonexistent:visited,
+a.badinterwiki:visited {
+	color: #999;
+}
+
+a.badinterwiki:before {content: url(../img/moin-inter.png); margin: 0 0.2em;}
+a.interwiki:before {content: url(../img/moin-inter.png); margin: 0 0.2em;}
+a.attachment:before {content: url(../img/moin-attach.png); margin: 0 0.2em;}
+a.mailto:before {content: url(../img/moin-email.png); margin: 0 0.2em;}
+a.www:before {content: url(../img/moin-www.png); margin: 0 0.2em;}
+a.http:before {content: url(../img/moin-www.png); margin: 0 0.2em;}
+a.https:before {content: url(../img/moin-www.png); margin: 0 0.2em;}
+a.file:before {content: url(../img/moin-ftp.png); margin: 0 0.2em;}
+a.ftp:before {content: url(../img/moin-ftp.png); margin: 0 0.2em;}
+a.nntp:before {content: url(../img/moin-news.png); margin: 0 0.2em;}
+a.news:before {content: url(../img/moin-news.png); margin: 0 0.2em;}
+a.telnet:before, a.ssh:before {content: url(../img/moin-telnet.png); margin: 0 0.2em;}
+a.irc:before, a.ircs:before {content: url(../img/moin-telnet.png); margin: 0 0.2em;}
+
+/* border */
+hr {
+	height: 1px;
+	background-color: #c0c0c0;
+	border: none;
+}
+
+.hr1 {height: 2px;}
+.hr2 {height: 3px;}
+.hr3 {height: 4px;}
+.hr4 {height: 5px;}
+.hr5 {height: 6px;}
+.hr6 {height: 7px;}
+
+/* listing */
+li p {
+    margin: .25em 0;
+}
+
+li.gap {
+    margin-top: 0.5em;
+}
+
+dt {
+    margin-top: 0.5em;
+    font-weight: bold;
+}
+
+dd {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+dd p {
+    margin: 0.25em 0;
+}
+
+/* input */
+input {
+    /* does strange effect to button (text size becomes bigger when clicking)
+    font-size: 1em;
+    font-family: Arial, Lucida Grande, sans-serif;
+    */
+}
+
+textarea {
+    font-size: 1em;
+    font-family: monospace;
+}
+
+/* table */
+table {
+	margin: 0.5em 0 0 0.5em;
+	border: none;
+	/*border-collapse: collapse;*/
+}
+
+th, td {
+	padding: 0.25em 0.5em 0.25em 0.5em;
+	border: 1px solid #AFC9E7;
+}
+
+td p {
+	margin: 0;
+	padding: 0;
+}
+
+tr.header {
+	background-color: #93A5BB;
+	font-weight: bold;
+	color: #fff;
+	height: 0.9em;
+	font-size: 0.9em;
+}
+
+tr.header td,
+tr.header th {
+	border: 1px solid #93A5BB;
+}
+
+tr.header a {
+	color: #fff;
+	text-decoration: underline;
+}
+
+tr.header a:hover {
+	color: #ddd;
+}
+
+/* forms */
+input {
+	font-size: 1em;
+	font-family: Arial, Lucida Grande, sans-serif;
+}
+
+textarea {
+	font-size: 1em;
+	/*font-family: monospace;*/
+}
+
+/* texts */
+.u {
+	text-decoration: underline;
+}
+.strike {
+	text-decoration: line-through;
+}
+
+/* anchor */
+.anchor {
+	margin: 0 !important;
+	padding: 0;
+}
+
+/* comment */
+.comment {
+	color: #666;
+	background-color: #eee;
+}
+
+/* highlight */
+strong.highlight {
+    padding: 1pt;
+	background-color: #F9FC7E;/*#D6E0F5;*/
+    color: #000;
+}
+
+a strong.highlight {
+    color: #333399;
+}
+
+a:hover strong.highlight {
+    text-decoration: underline;
+}
+
+/* admonitions */
+div.caution,
+div.warning,
+div.important,
+div.note,
+div.tip {
+	border-left: 5px solid #CC0033;
+	padding: 0 40px;
+	min-height: 2em;
+}
+
+div.caution {
+	border-color: #CC0033;
+	background: url("../img/a_caution.png") no-repeat scroll 4px 50% transparent;
+}
+div.warning {
+	border-color: #CC0033;
+	background: url("../img/a_warning.png") no-repeat scroll 4px 50% transparent;
+}
+div.important {
+	border-color: #CC6600;
+	background: url("../img/a_important.png") no-repeat scroll 4px 50% transparent;
+}
+div.note {
+	border-color: #3E507C;
+	background: url("../img/a_note.png") no-repeat scroll 4px 50% transparent;
+}
+div.tip {
+	border-color: #3E507C;
+	background: url("../img/a_tip.png") no-repeat scroll 4px 50% transparent;
+}
+
+/* footnotes */
+.footnotes {
+    padding-top: 0.25em;
+	border-top: 1px solid #444;
+	color: #444;
+    font-size: 0.75em;
+}
+
+/* table of contents */
+div.table-of-contents {
+    display: inline-table;
+    color: #313E59;
+	font-size: 0.8em;
+}
+
+p.table-of-contents-heading {
+    margin: 0 0 0.25em;
+	padding: 0;
+	font-size: 1.5em;
+}
+
+div.table-of-contents ol {
+	margin: 0;
+	padding: 0 0 0 2em;
+}
+
+div.table-of-contents > ol {
+	border-left: 2px dotted #313E59;
+	margin-left: 2em;
+	padding-left: 2.5em;
+}
+
+div.table-of-contents ul {
+	margin: 0;
+	list-style: none;
+}
+
+div.table-of-contents li {
+	margin: 0;
+	padding: 0;
+}
+
+/* navigation */
+table.navigation {
+	margin-left: 0 !important;
+	padding: 0;
+    background: #E7E7E7;
+	border: 1px solid #9C9C9C;
+    font-weight: bold;
+	text-align: center;
+}
+
+table.navigation th, table.navigation td {
+	border: none;
+}
+
+/* parsers */
+pre {
+	padding: 0.5em;
+	font-family: courier, monospace;
+	border: 1px solid #C7CFD5;
+	background: #F0F3F7;
+	white-space: pre;
+	/* begin css 3 or browser specific rules - do not remove!
+	see: http://forums.techguy.org/archive/index.php/t-249849.html */
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	white-space: -moz-pre-wrap;
+	white-space: -pre-wrap;
+	white-space: -o-pre-wrap;
+	/* end css 3 or browser specific rules */
+}
+
+pre.comment {
+    background-color: #CCCCCC;
+    color: red;
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+pre.comment:before {
+    content: url(../img/attention.png);
+}
+
+/* code highlighter */
+div.codemsg {
+	margin: 0.5em 0;
+	padding: 0.5em;
+	padding-left:2.5em;
+	background:none;
+	border: 1pt solid #CCBDAE;
+	background-color: #F7F0E0;
+	background-image:url('../img/alert.png');
+	background-repeat:no-repeat;
+	background-position: 0.5em 0.5em;
+	color: black;
+}
+
+div.codearea {
+	margin: 0.5em 0;
+	padding: 0;
+	border: 1px solid #C7CFD5;
+	background-color: #F1F5F9;
+	color: black;
+}
+
+div.codearea pre span.line span.LineNumber a {
+	text-decoration: none;
+	color: gray;
+}
+
+div.codearea pre {
+	margin: 0;
+	padding: 10pt;
+	border: none;
+}
+
+a.codenumbers {
+	margin: 0 10pt;
+	font-size: 0.85em;
+}
+
+div.codearea pre span.LineNumber {color: gray;}
+div.codearea pre span.ID {color: #000000;}
+div.codearea pre span.Operator {color: #0000C0;}
+div.codearea pre span.Char {color: #004080;}
+div.codearea pre span.Comment {color: #008000;}
+div.codearea pre span.Number {color: #0080C0;}
+div.codearea pre span.String {color: #004080;}
+div.codearea pre span.SPChar {color: #0000C0;}
+div.codearea pre span.ResWord {color: #A00000;}
+div.codearea pre span.ConsWord {color: #008080; font-weight: bold;}
+div.codearea pre span.Error {color: #FF8080; border: solid 1.5pt #FF0000;}
+div.codearea pre span.ResWord2 {color: #0080ff; font-weight: bold;}
+div.codearea pre span.Special {color: #0000ff;}
+div.codearea pre span.Preprc {color: #803999;}
+
+div.codearea pre span.DiffAdded   {color: #4876FF;}
+div.codearea pre span.DiffRemoved {color: #FF0000;}
+div.codearea pre span.DiffChanged {color: #FF7F50;}
+div.codearea pre span.DiffSeparator {color: #228B22; font-weight: bold}
+
+/* calendar */
+th.cal-header {
+	background-color: #93A5BB;
+	text-align: center;
+	color: #fff;
+	font-size: 0.8em;
+	height: 0.8em;
+	border: none;
+}
+
+th.cal-header a {
+	color: #fff;
+    text-decoration: underline;
+}
+
+th.cal-header a:hover {
+	color: #ddd;
+}
+
+td.cal-workday, td.cal-weekend {
+	text-align: center;
+	font-size: 0.8em;
+	height: 0.8em;
+	border: none;
+}
+
+td.cal-workday {
+	background-color: #ddddff;
+}
+
+td.cal-weekend {
+	background-color: #ffdddd;
+}
+
+td.cal-today {
+	background-color: #AFC9E7 !important;
+	border-style: solid;
+	border-width: 2pt;
+	text-align: center;
+}
+
+td.cal-nottoday {
+	background-color: #fff !important;
+}
+
+td.cal-invalidday {
+	
+}
+
+a.cal-emptyday, a.cal-weekend {
+	color: #999;
+	text-align: center;
+}
+a.cal-usedday {
+	font-weight: bold;
+	text-align: center;
+}
+
+table.tip {
+	color: black;
+	background-color: #FFFFBF;
+	font-size: small;
+	font-weight: normal;
+	border: 1px solid #C1B638;
+	border-collapse: collapse;
+	padding: 0 0 0 0.5em;
+	-moz-box-shadow: 2px 2px 4px #999;
+	-webkit-box-shadow: 2px 2px 4px #999;
+}
+
+th.tip {
+	font-weight: bold;
+	font-weight: 0.8em;
+	height: 0.8em;
+	text-align: left;
+	border: none;
+	padding: 0 0 0 0.5em;
+}
+
+td.tip {
+	border: none;
+	text-align: left;
+	padding: 0 0 0 0.5em;
+}
+*[dir="rtl"] td.tip {
+	text-align: right;
+}
+
+/* textcha */
+#textcha {
+	font-size: 100%;
+	margin-top: 0.5em;
+	border: 2px solid #FF8888;
+	color: black;
+	vertical-align: middle;
+	padding: 3px 2px;
+}
+
+#textcha-answer {
+	border: 2px solid #000000;
+	padding: 3px 2px;
+}
+
+/** print styles **/
+/* clearpage */
+.clearpage {
+	background: none;
+	border: 2px dotted #ccc;
+}
+
+
+/*
+ * MoinPages styles
+ */
+
+.advancedsearch {
+    border: 2px solid #AFC9E7;
+}
+
+.advancedsearch td {
+    border: none;
+}
+
+.advancedsearch td.searchfor {
+    font-weight: bold;
+}
+
+.advancedsearch td.submit input {
+    width: 100%;
+}
+
+/* search */
+.searchstats {
+    margin-left: 1em;
+    text-indent: 0 !important;
+    font-size: 0.8em;
+}
+
+.searchresults {
+    margin-left: 1em;
+}
+
+.searchresults dl dt,
+.searchresults dl dd {
+    line-height: 1.5em;
+}
+
+.searchresults dl dt {
+    font-weight: normal;
+    margin: 1em 0 0 0;
+}
+
+.searchresults dl dt a {
+    text-decoration: underline;
+}
+
+.searchresults dl dt .info {
+    color: #666;
+}
+
+.searchresults dl dd {
+    margin: 0;
+    font-size: 0.8em;
+}
+
+.searchresults .searchhitinfobar {
+    margin: 0;
+    padding: 0;
+    color: #0E774A;
+    font-size: 0.8em;
+}
+
+/*.searchresults .searchpages td {
+    border: none;
+}*/
+
+/* wikitip */
+#WikiTipOfTheDay\.RandomQuote {
+	background: url("/MoinMoinStatic/mmatheme/img/a_tip.png") no-repeat scroll 4px 50% #FFFFFF;
+	border-left: 5px solid #3F517D;
+	padding: 0 40px;
+	min-height: 2em;
+}
+
+/* attachment */
+a.download {
+	margin-left: 0 !important;
+	padding: 0.5em;
+    background: #E7E7E7;
+	border: 1px solid #9C9C9C;
+    font-weight: bold;
+	text-align: center;
+}
+
+object {
+    margin-left: 0 !important;
+}
+
+/* recent changes */
+.recentchanges p {
+	margin: 0.25em;
+}
+
+.recentchanges td {
+	vertical-align: top;
+	border: none;
+	border-bottom: 1pt solid #9BB3CD;
+}
+
+.rcdaybreak td {
+	background: #9BB3CD;
+	border: none;
+}
+
+.rcdaybreak td a {
+	font-size: 0.88em;
+}
+
+.rcicon1, .rcicon2 {
+	text-align: center;
+}
+
+.rcpagelink {
+	width: 33%;
+}
+
+.rctime {
+	font-size: 0.88em;
+	white-space: nowrap;
+}
+
+.rceditor {
+	white-space: nowrap;
+	font-size: 0.88em;
+}
+
+.rccomment {
+	width: 50%;
+	color: gray;
+	font-size: 0.88em;
+}
+
+.rcrss {
+	float: right;
+}
+
+.recentchanges[dir="rtl"] .rcrss {
+	float: left;
+}
+
+/* diff */
+.diff {
+	width: 99%;
+	table-layout: fixed;
+}
+
+.diff-title {
+	background-color: #C0C0C0;
+}
+
+.diff-added {
+	background-color: #E0FFE0;
+	vertical-align: top;
+	width: 50%;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	font-family: courier, monospace;
+}
+
+.diff-removed {
+	background-color: #FFFFE0;
+	vertical-align: top;
+	width: 50%;
+	white-space: pre-wrap;
+	word-wrap: break-word;
+	font-family: courier, monospace;
+}
+
+.diff-added span {
+	background-color: #80FF80;
+}
+
+.diff-removed span {
+	background-color: #FFFF80;
+}
+
+td.diff-info {
+	vertical-align: top;
+}
+
+div.diff-info {
+	white-space: nowrap;
+}
+
+div.diff-info-rev-comment span.diff-info-value {
+	white-space: normal;
+}
+
+div.diff-info-headbar {
+	background-color: #E8E8E8;
+	width: 100%;
+	padding: 0.25em 0.5em;
+	margin: -0.25em -0.5em;
+	margin-bottom: 0.25em;
+	text-align: center;
+}
+
+td.diff-same {
+	text-align: center;
+	border: 0;
+}
+
+/* editor */
+#preview, #previewbelow {
+	border: 2px solid #e5e5e5;
+	padding: .5em;
+	background: url(../img/draft.png);
+}
+
+#editor-comment {
+	width: 70%;
+}
+
+#editor-textarea {
+	width: 100%;
+}
+
+/* preferences */
+.userpref table, .userpref td {
+	border: none;
+}
+
+
+/*
+ * User styles
+ */
+
+/* border */
+.solid { border: 2px solid #9BB3CD; padding: 2px; }
+.dashed { border: 2px dashed #9BB3CD; padding: 2px; }
+.dotted { border: 2px dotted #9BB3CD; padding: 2px; }
+
+/* test-align */
+.left { text-align: left; }
+.center { text-align: center; }
+.right { text-align: right; }
+.justify { text-align: justify; }
+
+/* background-color */
+.red { background-color: #FFCCCC; }
+.green { background-color: #CCFFCC; }
+.blue { background-color: #CCCCFF; }
+.yellow { background-color: #FFF29F; }
+.orange { background-color: #FFD59B; }
+
+/* suikomareruzo */
+div.suikomareruzo {
+	border-left: 5px solid #3E507C;
+	padding: 0 40px;
+	min-height: 2em;
+	background: url("../img/a_suikomareruzo.png") no-repeat scroll 4px 50% transparent;
+}

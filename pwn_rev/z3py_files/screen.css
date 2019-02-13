@@ -1,0 +1,154 @@
+/* 
+ * MMA Theme (screen.css)
+ *
+ * Author: (c) 2010-2011 chmod@mma.club.uec.ac.jp
+ * Original: (c) 2001, 2002, 2003 by Juergen Hermann
+*/
+
+
+/*
+ * Chrome styles
+ */
+
+
+@media screen and (min-width: 800px) {
+/* search */
+#search {
+	margin-left: 160px;
+}
+
+/* logo */
+#logo {
+    float: none;
+    position: absolute;
+    /*top: 4.4em;*/
+}
+
+/* wikipanel */
+#wikipanel {
+    margin: 2em 10px 0 0;
+	padding: 5px;
+    position: relative;
+    top: 79px;
+    float: left;
+	border-right: 1px solid #ccc;
+	width: 140px;
+}
+
+#wikipanel #navibar {
+    margin: 0;
+	padding: 0;
+	text-align: right;
+}
+
+#wikipanel #navibar div {
+    margin: 0;
+    padding: 0;
+	font-weight: bold;
+	line-height: 3.5em;
+}
+
+#wikipanel #navibar span {
+	display: block;
+}
+
+#wikipanel #custom_sidebar {
+  display: block;
+}
+
+/* pagepanel */
+#pagepanel {
+    margin: 0 10px 0 160px;
+    padding: 5px;
+    clear: none;
+}
+
+#pagepanel .editbar {
+    text-align: right;
+}
+
+/* message */
+#message {
+    margin-left: 160px;
+}
+
+/* location */
+#location {
+	margin: 0 10px 0 160px;
+}
+
+/* page */
+#page {
+	margin: 0 10px 0 160px;
+}
+
+}
+
+/*
+ * Device specific
+ */
+
+/* for narrow screen */
+/*@media screen and (max-width: 800px) {
+
+#logo {
+	display: none;
+}
+
+#user {
+	background-color: #303C4F;
+	background-image: url("../img/logo_mini.png");
+	background-position: 0 3px;
+	background-repeat: no-repeat;
+}
+
+#search {
+}
+
+#sidebar {
+	float: none;
+	overflow: auto;
+	margin: 5px 5px 0;
+	padding: 0;
+}
+
+#wikipanel {
+	border-right: none;
+	color: #999999;
+	margin: 0;
+	padding: 0;
+	font-size: 0.8em;
+	width: 100%;
+	float: none;
+}
+
+#wikipanel ul {
+   font-size: 1em;
+}
+
+#wikipanel ul li {
+	float: left;
+	padding: 0 0 0 8px;
+}
+
+#wikipanel ul lh {
+	clear: both;
+	float: left;
+	line-height: 1em;
+}
+
+#headbar {
+	margin: 5px;
+	padding: 0;
+}
+
+#location {
+	margin: 0 5px;
+}
+
+#page {
+	margin: 0 5px;
+	padding: 5px;
+}
+
+}*/

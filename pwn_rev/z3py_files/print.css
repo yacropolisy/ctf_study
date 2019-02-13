@@ -1,0 +1,110 @@
+/* 
+ * MMA Theme (print.css)
+ *
+ * Author: (c) 2010-2011 chmod@mma.club.uec.ac.jp
+ * Original: (c) 2001, 2002, 2003 by Juergen Hermann
+*/
+
+/*
+ * Base styles
+ */
+
+body {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 0.75em;
+}
+
+
+/*
+ * Header, Footer and chromes
+ */
+
+/* user panel */
+#user {
+	display: none;
+}
+
+#search {
+	display: none;
+}
+
+#logo {
+	display: none;
+}
+
+#wikipanel, #pagepanel {
+	display: none;
+}
+
+#location {
+    display: none;
+}
+
+#footer {
+	display: none;
+}
+
+#message {
+	display: none;
+}
+
+
+/*
+ * Content styles
+ */
+
+/* page */
+#page {
+	margin: 0;
+	padding: 0;
+}
+
+/* heading */
+h1, h2 {
+	border-left: 5px solid #303C4F;
+	border-bottom: none;
+	font-weight: bolder;
+	padding-left: 10px;
+}
+
+/* page info */
+#pageinfo {
+	color: #ccc;
+	font-size: 0.75em;
+}
+
+/* table of contents */
+div.table-of-contents a {
+	color: #000 !important;
+	text-decoration: none !important;
+}
+
+/* table */
+tr.header {
+	font-weight: bold;
+	color: #000;
+	height: 0.9em;
+	font-size: 0.9em;
+}
+
+tr.header td,
+tr.header th {
+	border: 2px solid #93A5BB !important;
+}
+
+tr.header a {
+	color: #000 !important;
+	text-decoration: underline;
+}
+
+tr.header a:hover {
+	color: #000 !important;
+}
+
+/* clearpage */
+.clearpage {
+	border: none;
+	page-break-after: always;
+}
